@@ -20,9 +20,6 @@ class VideoCamera(object):
        return jpeg.tobytes()
 
    def update(self):
-       count = 0
        while True:
             time.sleep(0.05)
-            print(count)
-            count+=1
             (self.grabbed , self.frame) = self.video.read()
