@@ -18,7 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('imagelive.urls')
-    ),
-
+    path('', include('imagelive.urls')),
+    path('camera/', include('streamvideo.urls'))
 ]
