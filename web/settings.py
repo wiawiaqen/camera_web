@@ -37,11 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tailwind',
+    # 'tailwind',
     'imagelive'
 ]
 
-TAILWIND_APP_NAME = 'imagelive'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
