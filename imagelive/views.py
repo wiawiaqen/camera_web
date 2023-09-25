@@ -74,12 +74,13 @@ def gen_video():
     """
     camera = VideoCamera(URL=URL)
     while True:
-        try:
-            frame = camera.get_frame()
-            yield (b'--frame\r\n'
-                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
-        except:
-            camera = VideoCamera(URL=URL)
+        if camera.video.isOpened():
+            try:
+                frame = camera.get_frame()
+                yield (b'--frame\r\n'
+                    b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
+            except:
+                camera = VideoCamera(URL=URL)
         
     
         
